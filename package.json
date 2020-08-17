@@ -1,15 +1,18 @@
 {
-  "name": "",
+  "name": "Aribnb",
   "version": "",
-  "description": "",
-  "author": "",
+  "description": "Airbnb Clone Proxy",
+  "author": "Brennan Caldwell",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon server/index.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
