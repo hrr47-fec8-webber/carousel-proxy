@@ -26,6 +26,21 @@ app.get('/api/booking/:id', (req, res) => {
     .catch((error) => console.log(error));
 });
 
+app.get('api/overall_reviews/:id', (req, res) => {
+  const id = req.url.slice(20);
+  console.log(id);
+  axios.get(`http://localhost:3003/api/overall_reviews/${id}`)
+    .then((data) => res.send(data.data))
+    .catch((error) => console.log(error));
+});
+
+app.get('api/individual_reviews/:id', (req, res) => {
+  const id = req.url.slice(23);
+  axios.get(`http://localhost:3003/api/individual_reviews/${id}`)
+    .then((data) => res.send(data.data))
+    .catch((error) => console.log(error));
+});
+
 app.listen(port, () => {
   console.log(`Proxy server listening on port ${port}`);
 });
