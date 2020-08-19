@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <head>
   <title>LairBnB</title>
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+ <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+ <!--  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
   <style>
+    body {
+      background-color: white !important;
+    }
     #page {
       display: grid;
       grid-template-rows: repeat(4, 1 fr);
@@ -20,7 +23,14 @@
       grid-row: 3;
     }
     #moreplaces {
-      grid-row:4;
+      width: 1000px;
+      margin: auto;
+      background-color: lightgray;
+      grid-row: 4;
+    }
+    #moreplaces.header{
+      position: relative;
+      left: 100px;
     }
 
   </style>
@@ -35,4 +45,5 @@
   <script src="http://localhost:3001/bundle.js"></script>
   <script src="http://localhost:3002/public/bundle.js"></script>
   <script src="http://localhost:3003/public/bundle.js"></script>
+  <script src="http://localhost:9000/bundle.js"></script>
 </body>
