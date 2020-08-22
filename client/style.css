@@ -108,9 +108,8 @@ body {
 
 #description {
   width: 570px;
-  width: 570px;
-  margin: 15px;
-  padding: 10px 30px 0 0;
+  margin: 15px 0 0 40px;
+  padding: 10px 10px 0 0;
 }
 
 #descBlock {
@@ -149,15 +148,20 @@ body {
   background-repeat: no-repeat;
 }
 
-.homepageShare {
+.homepageIconPosition {
   grid-area: 1 / 2 / span 1 / span 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.homepageShare {
   background-image: url('./assets/homepageshare.png');
   background-repeat: no-repeat;
   height: 50px;
   width: 150px;
   position: relative;
-  left: 380px;
-  top: 55px;
+  top: 50px;
+  right: 70px;
 }
 
 .layout {
