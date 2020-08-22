@@ -1,0 +1,222 @@
+body {
+  background-color: white !important;
+}
+
+#above {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  font-family: 'Airbnb Cereal App Book';
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0px .5px 1px lightgray;
+}
+
+#logo {
+  grid-area: 1 / 1 / span 1 / span 1;
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
+#path {
+  position: relative;
+  left: 55px;
+  top: 12px;
+}
+
+#l {
+  position: absolute;
+  font-family: 'Airbnb Cereal App Medium';
+  left: 87px;
+  top: -1px;
+  color: #ff385d;
+  font-size: 22px;
+  transform: rotate(-30deg);
+}
+
+#carrot{
+  position: absolute;
+  left: 90px;
+  top: 21px;
+  color: #ff385d;
+  font-family: 'Airbnb Cereal App Medium';
+}
+#location {
+  position: relative;
+  font-size: 15px;
+  width: 170px;
+  height: 30px;
+  padding: 12px 15px 0px 35px;
+  margin-top: 10px;
+  left: 80px;
+  top: 5px;
+  grid-area: 1 / 2 / span 1 / span 1;
+  border: .5px solid lightgray;
+  border-radius: 25px;
+}
+
+#locationSearch {
+  position: relative;
+  left: 5px;
+}
+
+#locationText {
+  position: relative;
+  left: 5px;
+  bottom: 2px;
+}
+
+#titleHeader {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#page {
+  display: grid;
+  grid-template-rows: repeat(4, 1 fr);
+}
+#carousel {
+  grid-row: 1;
+}
+#information {
+  grid-row: 2;
+  display: flex;
+  justify-content: space-around;
+}
+#app {
+  grid-row: 3;
+  padding: 20px;
+  border-top: .5px solid lightgray;
+  margin: 30px 0 0 0;
+}
+#module-main {
+  margin: 20px;
+}
+#moreplaces {
+  grid-row: 4;
+  width: 1000px;
+}
+
+
+#locationTitle {
+  grid-area: 1 / 1 / span 1 / span 1;
+  position: relative;
+  left: 60px;
+  top: 5px;
+  width: 500px;
+}
+
+#description {
+  width: 570px;
+  width: 570px;
+  margin: 15px;
+  padding: 10px 30px 0 0;
+}
+
+#descBlock {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: .5px solid lightgray;
+}
+
+#lorem {
+  font-family: 'Airbnb Cereal App Light';
+  font-size: 16px;
+  position: relative;
+  top: 10px;
+}
+
+.title {
+  font-family: 'Airbnb Cereal App Medium';
+  font-size: 27px;
+  color: black;
+}
+
+.desc {
+  font-family: 'Airbnb Cereal App Medium';
+  font-size: 23px;
+  color: rgb(44, 44, 44)
+}
+
+.homepageLogin {
+  position: relative;
+  top: 10px;
+  right: -180px;
+  height: 50px;
+  width: 200px;
+  margin: 0 30px 0 0;
+  background-image: url('./assets/loginicon.png');
+  background-repeat: no-repeat;
+}
+
+.homepageShare {
+  grid-area: 1 / 2 / span 1 / span 1;
+  background-image: url('./assets/homepageshare.png');
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 150px;
+  position: relative;
+  left: 380px;
+  top: 55px;
+}
+
+.layout {
+  font-family: 'Airbnb Cereal App Book';
+  font-size: 18px;
+  position: relative;
+  bottom: 9px;
+}
+
+#owner {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%/50%;
+  position: relative;
+  top: 17px;
+  left: 13px;
+}
+
+#hostInfo {
+  height: 40px;
+  width: 200px;
+  background-image: url('./assets/Screen\ Shot\ 2020-08-21\ at\ 12.22.21\ PM.png');
+  background-repeat: no-repeat;
+  position: relative;
+  bottom: 7px;
+  display: inline-block;
+}
+
+.placeName {
+  display: inline;
+  position: relative;
+  bottom: 30px;
+  right: 20px;
+  font-family: 'Airbnb Cereal App Book';
+  color: rgb(105, 105, 105);
+}
+
+.dot {
+  position: relative;
+  right: 4px;
+}
+
+@font-face {
+  font-family: 'Airbnb Cereal App Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Airbnb Cereal App Medium'), url('./fonts/cereal/AirbnbCerealMedium.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Light'), url('./fonts/cereal/AirbnbCerealLight.woff') format('woff');
+    }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Book'), url('./fonts/cereal/AirbnbCerealBook.woff') format('woff');
+    }
