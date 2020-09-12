@@ -24,3 +24,11 @@ coverage
 build/
 dist/
 
+# Services
+booking-service
+carousel-service
+moreplacestostay-service
+reviews-service
+
+# Keys
+sdc-proxy.pem

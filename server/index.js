@@ -1,44 +1,25 @@
+require('newrelic');
 const express = require('express');
+const { createProxyMiddleware } = require('http-proxy-middleware');
 const path = require('path');
-const app = express();
-const axios = require('axios');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const port = process.env.PORT || 3000;
 
-app.use(cors());
+const app = express();
+const port = 3000;
+
 app.use(express.static(path.join(__dirname, '/../client')));
 app.use('/:id', express.static(path.join(__dirname, '/../client')));
 
-app.use(bodyParser.json());
+// Carousel
+app.use('/api/images/:id', createProxyMiddleware({ target: 'http://3.15.189.69:4001', changeOrigin: true }));
 
-app.get('/api/images/:id', (req, res) => {
-  const id = req.url.slice(12);
-  axios.get(`http://localhost:3001/api/images/${id}`)
-    .then((data) => res.send(data.data))
-    .catch((error) => console.log(error));
-});
+// Booking service
+app.use('api/booking/:id', createProxyMiddleware({ target: 'http://13.56.164.217', changeOrigin: true }));
 
-app.get('/api/booking/:id', (req, res) => {
-  const id = req.url.slice(13);
-  axios.get(`http://localhost:3002/api/booking/${id}`)
-    .then((data) => res.send(data.data))
-    .catch((error) => console.log(error));
-});
+// Reviews
+app.use('/api/reviews/:id', createProxyMiddleware({ target: 'http://http://3.135.189.4:4002', changeOrigin: true }));
 
-app.get('/api/overall_reviews/:id', (req, res) => {
-  const id = req.url.slice(21);
-  axios.get(`http://localhost:3003/api/overall_reviews/${id}`)
-    .then((data) => res.send(data.data))
-    .catch((error) => console.log(error));
-});
-
-app.get('/api/individual_reviews/:id', (req, res) => {
-  const id = req.url.slice(24);
-  axios.get(`http://localhost:3003/api/individual_reviews/${id}`)
-    .then((data) => res.send(data.data))
-    .catch((error) => console.log(error));
-});
+// More places
+app.use('/residences', createProxyMiddleware({ target: 'http://35.168.8.22', changeOrigin: true }));
 
 app.listen(port, () => {
   console.log(`Proxy server listening on port ${port}`);
