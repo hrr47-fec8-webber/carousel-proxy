@@ -1,6 +1,6 @@
 # Project Name
 
-Proxy server for Lairbnb, a vacation rental booking website.
+Proxy server for Booked, a vacation rental booking website.
 
 ## Related Projects
 
@@ -17,7 +17,7 @@ Proxy server for Lairbnb, a vacation rental booking website.
 
 ## Usage
 
-A proxy server for Lairbnb, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id. 
+A proxy server for Booked, a vacation rental booking website. Once the server is running, directing the browser to http://localhost:3000/:id will render location data for the associated id. 
 
 ## Requirements
 
