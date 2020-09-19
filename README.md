@@ -1,4 +1,4 @@
-# Project Name
+# Booked Proxy
 
 Proxy server for Booked, a vacation rental booking website.
 
