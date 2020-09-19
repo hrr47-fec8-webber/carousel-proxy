@@ -1,6 +1,7 @@
 # Booked Proxy
 
 Welcome to Booked, a vacation rental booking website! This repo contains the proxy server that renders all modules.
+
 ![Alt text](./screenshots/PageGif.gif?raw=true "Full Page")
 
 
